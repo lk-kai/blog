@@ -77,6 +77,10 @@ module.exports = {
       {
         title: '前端优化',
         children: ['/Optimizes/function']
+      },
+      {
+        title: '面试',
+        children: ['/mianshi/writing']
       }
     ]
   }
