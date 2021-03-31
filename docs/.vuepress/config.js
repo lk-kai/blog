@@ -3,7 +3,11 @@ module.exports = {
   description: 'Just playing around',
   base: '/blog/',
   head: [['link', { rel: 'icon', href: '/image/title.jpg' }]],
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
+    lastUpdated: 'Last Updated',
     logo: '/image/title.jpg',
     nav: [
       { text: 'Home', link: '/' },
@@ -15,9 +19,10 @@ module.exports = {
           {
             text: 'MDN',
             link: 'https://developer.mozilla.org/zh-CN/'
-          },{
-            text:'微信小程序',
-            link:'https://developers.weixin.qq.com/miniprogram/dev/framework/'
+          },
+          {
+            text: '微信小程序',
+            link: 'https://developers.weixin.qq.com/miniprogram/dev/framework/'
           },
           { text: 'Vue3 API', link: 'https://vue3js.cn/vue-composition-api/' },
           {
