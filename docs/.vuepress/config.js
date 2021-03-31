@@ -6,6 +6,7 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
+  theme: 'vuepress-theme-yilia-plus',
   themeConfig: {
     lastUpdated: 'Last Updated',
     logo: '/image/title.jpg',
