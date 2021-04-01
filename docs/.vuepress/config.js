@@ -2,15 +2,30 @@ module.exports = {
   title: 'lk-kai blog!',
   description: 'Just playing around',
   base: '/blog/',
-  head: [['link', { rel: 'icon', href: '/image/title.jpg' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/image/title.jpg' }],
+    [
+      'meta',
+      {
+        name: 'viewport',
+        content: 'width=device-width,initial-scale=1,user-scalable=no'
+      }
+    ]
+  ],
   markdown: {
     lineNumbers: true
   },
-  theme: 'vuepress-theme-yilia-plus',
+  theme: 'reco',
   themeConfig: {
+    sidebar: {
+      '/docs/theme-reco/': ['', 'theme', 'plugin', 'api']
+    },
+    type: 'blog',
+    author: 'lk-kai',
     lastUpdated: 'Last Updated',
     logo: '/image/title.jpg',
     nav: [
+      // { text: '时间轴', link: '/timeline/', icon: 'reco-date' },
       { text: 'Home', link: '/' },
       {
         text: '文档',
@@ -66,6 +81,7 @@ module.exports = {
       },
       { text: 'github', link: 'https://github.com/lk-kai' }
     ],
+    // sidebar: 'auto'
     sidebar: [
       {
         title: 'Vue',
