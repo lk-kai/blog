@@ -18,7 +18,7 @@ module.exports = {
   theme: 'reco',
   themeConfig: {
     sidebar: {
-      '/docs/theme-reco/': ['', 'theme', 'plugin', 'api']
+      '/docs/theme-reco/': ['/', 'theme', 'plugin', 'api']
     },
     type: 'blog',
     author: 'lk-kai',
@@ -81,24 +81,24 @@ module.exports = {
       },
       { text: 'github', link: 'https://github.com/lk-kai' }
     ],
-    // sidebar: 'auto'
-    sidebar: [
-      {
-        title: 'Vue',
-        path: '/vue/'
-      },
-      {
-        title: '工具方法',
-        children: ['/utils/regexp', '/utils/function', 'utils/library']
-      },
-      {
-        title: '前端优化',
-        children: ['/Optimizes/function']
-      },
-      {
-        title: '面试',
-        children: ['/mianshi/writing']
-      }
-    ]
+    sidebar: 'auto'
+    // sidebar: [
+    //   {
+    //     title: 'Vue',
+    //     path: '/vue/'
+    //   },
+    //   {
+    //     title: '工具方法',
+    //     children: ['/utils/regexp', '/utils/function', 'utils/library']
+    //   },
+    //   {
+    //     title: '前端优化',
+    //     children: ['/Optimizes/function']
+    //   },
+    //   {
+    //     title: '面试',
+    //     children: ['/mianshi/writing']
+    //   }
+    // ]
   }
 }
