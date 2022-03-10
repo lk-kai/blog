@@ -1,3 +1,5 @@
+# 方法
+
 
 ## 节流
 
@@ -17,6 +19,7 @@ function throttle(fn, delay = 100) {
 > 函数节流指的是规定某个时间内只能执行一次函数。
 
 ## 防抖
+
 ```js
 function debounce(fn, delay = 1000) {
   let timer;
