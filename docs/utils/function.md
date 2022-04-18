@@ -106,3 +106,28 @@ promisify(wx.getSystemInfo)
     console.log('fail', err)
   })
 ```
+
+## 文件流下载
+
+```js
+handleExported (url, params, fileName) {
+    Message.warning('正在导出！');
+    httptool
+      .post(url, params)
+      .then(res => {
+        let blob = new Blob([res], {type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8'}); // 这里表示xmlx类型
+        let downloadElement = document.createElement("a");
+        let href = window.URL.createObjectURL(blob); // 创建下载的链接
+        downloadElement.href = href;
+        downloadElement.download = fileName; // 下载后文件名
+        document.body.appendChild(downloadElement);
+        downloadElement.click(); // 点击下载
+        document.body.removeChild(downloadElement); // 下载完成移除元素
+        window.URL.revokeObjectURL(href); // 释放掉blob对象
+      })
+      .catch(err => {
+        console.log(err)
+        Message.success('导出失败！');
+      });
+  }
+```
