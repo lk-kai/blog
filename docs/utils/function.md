@@ -110,6 +110,9 @@ promisify(wx.getSystemInfo)
 ## 文件流下载
 
 ```js
+// excel导出：设置responseType
+config.responseType = 'blob'
+
 handleExported (url, params, fileName) {
     Message.warning('正在导出！');
     httptool
